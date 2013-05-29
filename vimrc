@@ -117,3 +117,12 @@ au Syntax clojure RainbowParenthesesLoadRound
 let g:clj_highlight_builtins=1      " Highlight Clojure's builtins
 let g:clj_paren_rainbow=1           " Rainbow parentheses'!
 
+" Line numbering magic:
+"   - if Vim loses focus I'm not gonna move -> absolute
+"   - I don't move in insert mode -> absolute
+" possibly replace with jeffkreeftmeijer/vim-numbertoggle
+:au FocusLost * :set number
+:au FocusGained * :set relativenumber
+autocmd InsertEnter * :set number
+autocmd InsertLeave * :set relativenumber
+
