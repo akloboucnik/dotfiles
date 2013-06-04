@@ -21,6 +21,7 @@ set nowrap                " don't wrap text
 set hls                   " highlight search
 set noswapfile            " no backups, we have git
 set autoread              " reload files
+set nofoldenable          " no folding at all
 
 " highlight current line
 set cul
@@ -63,6 +64,7 @@ Bundle 'kien/rainbow_parentheses.vim'
 Bundle 'JavaScript-syntax'
 " Bundle 'FuzzyFinder'
 Bundle 'Syntastic'
+Bundle 'gitignore'
 " non github repos
 Bundle 'git://git.wincent.com/command-t.git'
 Bundle 'guns/vim-clojure-static'
