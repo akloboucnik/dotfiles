@@ -23,6 +23,10 @@ set noswapfile            " no backups, we have git
 set autoread              " reload files
 set nofoldenable          " no folding at all
 
+" search
+set ignorecase
+set smartcase
+
 " highlight current line
 set cul
 
@@ -128,3 +132,6 @@ let g:clj_paren_rainbow=1           " Rainbow parentheses'!
 autocmd InsertEnter * :set number
 autocmd InsertLeave * :set relativenumber
 
+
+au BufRead,BufNewFile *.hbs set filetype=handlebars
+au BufRead,BufNewFile *.md,*.mdown set filetype=markdown
