@@ -72,6 +72,7 @@ Bundle 'gitignore'
 " non github repos
 Bundle 'git://git.wincent.com/command-t.git'
 Bundle 'guns/vim-clojure-static'
+Bundle 'mileszs/ack.vim'
 " ...
 
 filetype plugin indent on     " required!
@@ -118,6 +119,9 @@ endif
 au BufRead,BufNewFile *.clj set filetype=clojure
 au Syntax clojure RainbowParenthesesActivate
 au Syntax clojure RainbowParenthesesLoadRound
+
+" Ack
+let g:ackprg = 'ag --nogroup --nocolor --column'
 
 " FIXME: doesn't work now
 let g:clj_highlight_builtins=1      " Highlight Clojure's builtins
