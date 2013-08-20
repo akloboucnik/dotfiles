@@ -1,4 +1,5 @@
-export PATH="/usr/local/bin:/usr/local/sbin:~/bin:/usr/local/share/npm/bin:$PATH"
+PATH="/usr/local/bin:/usr/local/sbin:~/bin:/usr/local/share/npm/bin:$PATH"
+
 export HISTCONTROL="ignoreboth"
 #export EDITOR='subl -nw'
 export EDITOR='mvim -f'
@@ -19,7 +20,7 @@ export GIT_PS1_SHOWUPSTREAM='1'
 export PS1='\h:\W$(__git_ps1 " (\[\033[01;32m\]%s\[\033[00m\])") \u\$ '
 
 # git achievements
-export PATH="$PATH:/Users/adam/Prog/git-achievements"
+PATH="$PATH:/Users/adam/Prog/git-achievements"
 alias git="git-achievements"
 
 # CL Tool to path
@@ -37,3 +38,12 @@ alias open_payroll='pdfcrack -m 4 -n 4 -charset="1234567890"'
 
 # rvm
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+# homebrew python global binaries to path
+export PATH="/usr/local/share/python:$PATH"
+
+# GDC stuff
+alias cdgd='cd ~/Work/gdc'
+alias cdgdc='cd ~/Work/gdc/gdc-client'
+
+
