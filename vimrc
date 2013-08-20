@@ -65,6 +65,7 @@ Bundle 'kien/rainbow_parentheses.vim'
 " Bundle 'tpope/vim-rails.git'
 " vim-scripts repos
 " Bundle 'L9'
+Bundle 'bufkill.vim'
 Bundle 'JavaScript-syntax'
 " Bundle 'FuzzyFinder'
 Bundle 'Syntastic'
@@ -73,6 +74,7 @@ Bundle 'gitignore'
 Bundle 'git://git.wincent.com/command-t.git'
 Bundle 'guns/vim-clojure-static'
 Bundle 'mileszs/ack.vim'
+Bundle "daylerees/colour-schemes", { "rtp": "vim-themes/" }
 " ...
 
 filetype plugin indent on     " required!
