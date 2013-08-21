@@ -1,9 +1,7 @@
 PATH="/usr/local/bin:/usr/local/sbin:~/bin:/usr/local/share/npm/bin:$PATH"
 
 export HISTCONTROL="ignoreboth"
-#export EDITOR='subl -nw'
-export EDITOR='mvim -f'
-export GIT_EDITOR='mvim -f -c"au VimLeave * !open -a Terminal"'
+export EDITOR="vim"
 
 # npm bash completion
 source "`brew --prefix`/etc/bash_completion.d/npm"
@@ -15,8 +13,6 @@ export GIT_PS1_SHOWDIRTYSTATE='1'
 export GIT_PS1_SHOWUPSTREAM='1'
 
 # setup git branch in prompt
-#GIT_PS1_SHOWDIRTYSTATE=1
-# export PS1='\h:\W \[\033[01;32m\]$(git symbolic-ref HEAD 2> /dev/null | cut -d / -f 3 | cut -c1-15)...\[\033[00m\] \u\$ '
 export PS1='\h:\W$(__git_ps1 " (\[\033[01;32m\]%s\[\033[00m\])") \u\$ '
 
 # git achievements
@@ -24,7 +20,7 @@ PATH="$PATH:/Users/adam/Prog/git-achievements"
 alias git="git-achievements"
 
 # CL Tool to path
-export PATH="$PATH:/Users/adam/Work/gdc/gooddata-cli-1.2.65/bin"
+PATH="$PATH:/Users/adam/Work/gdc/gooddata-cli-1.2.65/bin"
 
 # aliases
 alias ll="ls -l"
@@ -42,8 +38,9 @@ alias open_payroll='pdfcrack -m 4 -n 4 -charset="1234567890"'
 # homebrew python global binaries to path
 export PATH="/usr/local/share/python:$PATH"
 
-# GDC stuff
-alias cdgd='cd ~/Work/gdc'
+# cd aliases
+alias cdw='cd ~/Work'
+alias cdp='cd ~/Prog'
 alias cdgdc='cd ~/Work/gdc/gdc-client'
 
 
