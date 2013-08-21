@@ -74,7 +74,7 @@ Bundle 'gitignore'
 Bundle 'git://git.wincent.com/command-t.git'
 Bundle 'guns/vim-clojure-static'
 Bundle 'mileszs/ack.vim'
-Bundle "daylerees/colour-schemes", { "rtp": "vim-themes/" }
+Bundle 'git@github.com:tomasr/molokai.git'
 " ...
 
 filetype plugin indent on     " required!
@@ -89,19 +89,8 @@ filetype plugin indent on     " required!
 " NOTE: comments after Bundle command are not allowed..
 
 " theme and background
-set background=light
-" github256 is manually in .vim/colors - not Vundle managed
-" take from here: https://bitbucket.org/wwortiz/dotfiles/raw/219eabfde57ef8912047bfb4b830f6a81e7a6cdd/.vim/colors/github256.vim
-colorscheme github256
-
-" have to use Terminal.app profile from here:
-" https://github.com/sorin-ionescu/solarized/tree/692b152ed669cd0435d5233515fe6d17d67fe7a7/osx-terminal.app-colors-solarized/xterm-256color
-" to work with bigger contrast
-" FIXME this is the precise setup, DO NOT CHANGE ANYTHING OR IT WILL BREAK!
-" solarized options
-"let g:solarized_termcolors = 256
-" let g:solarized_visibility = "high"
-" let g:solarized_contrast = "high"
+set background=dark
+colorscheme molokai
 
 " Copy path to clipboard
 " Convert slashes to backslashes for Windows.
