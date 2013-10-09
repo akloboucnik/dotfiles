@@ -76,8 +76,6 @@ Bundle 'JavaScript-syntax'
 Bundle 'Syntastic'
 Bundle 'gitignore'
 " non github repos
-Bundle 'git://git.wincent.com/command-t.git'
-" ...
 
 filetype plugin indent on     " required!
 "
@@ -92,7 +90,6 @@ filetype plugin indent on     " required!
 
 " theme and background
 set background=dark
-"colorscheme molokai
 colorscheme solarized
 
 " Copy path to clipboard
@@ -130,6 +127,14 @@ let g:clj_paren_rainbow=1           " Rainbow parentheses'!
 autocmd InsertEnter * :set number
 autocmd InsertLeave * :set relativenumber
 
-
+" Handlebars
 au BufRead,BufNewFile *.hbs set filetype=handlebars
+
+" Markdown syntax
 au BufRead,BufNewFile *.md,*.mdown set filetype=markdown
+
+" Mappings for CtrlP
+nnoremap <leader>t :CtrlP<CR>
+nnoremap <leader>b :CtrlPBuffer<CR>
+nnoremap <leader>m :CtrlPMRUFiles<CR>
+
