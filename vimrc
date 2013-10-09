@@ -60,21 +60,23 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'nono/vim-handlebars'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'kien/rainbow_parentheses.vim'
+Bundle 'kien/ctrlp.vim'
 " Bundle 'Lokaltog/vim-easymotion'
-" Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 " Bundle 'tpope/vim-rails.git'
+Bundle 'guns/vim-clojure-static'
+Bundle 'tpope/vim-classpath'
+Bundle 'tpope/vim-fireplace'
+Bundle 'mileszs/ack.vim'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'leafgarland/typescript-vim'
 " vim-scripts repos
 " Bundle 'L9'
 Bundle 'bufkill.vim'
 Bundle 'JavaScript-syntax'
-" Bundle 'FuzzyFinder'
 Bundle 'Syntastic'
 Bundle 'gitignore'
 " non github repos
 Bundle 'git://git.wincent.com/command-t.git'
-Bundle 'guns/vim-clojure-static'
-Bundle 'mileszs/ack.vim'
-Bundle 'git@github.com:tomasr/molokai.git'
 " ...
 
 filetype plugin indent on     " required!
@@ -90,7 +92,8 @@ filetype plugin indent on     " required!
 
 " theme and background
 set background=dark
-colorscheme molokai
+"colorscheme molokai
+colorscheme solarized
 
 " Copy path to clipboard
 " Convert slashes to backslashes for Windows.
