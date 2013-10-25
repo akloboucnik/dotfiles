@@ -71,7 +71,8 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'leafgarland/typescript-vim'
 " vim-scripts repos
 " Bundle 'L9'
-Bundle 'bufkill.vim'
+" remove for not - not able to unmap \bb and so on - clashes with CtrlP
+" Bundle 'bufkill.vim'
 Bundle 'JavaScript-syntax'
 Bundle 'Syntastic'
 Bundle 'gitignore'
