@@ -140,3 +140,6 @@ nnoremap <leader>t :CtrlP<CR>
 nnoremap <leader>b :CtrlPBuffer<CR>
 nnoremap <leader>m :CtrlPMRUFiles<CR>
 
+" Setup Airline
+let g:airline_powerline_fonts = 1
+
