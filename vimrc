@@ -1,7 +1,6 @@
 set nocompatible               " be iMproved
 filetype off                   " required!
 
-syntax on
 set number
 set guifont=Menlo\ Regular:h12
 
@@ -70,6 +69,8 @@ Bundle 'mileszs/ack.vim'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'leafgarland/typescript-vim'
 Bundle 'bling/vim-airline'
+Bundle 'jeffkreeftmeijer/vim-numbertoggle'
+Bundle 'kchmck/vim-coffee-script'
 " vim-scripts repos
 " Bundle 'L9'
 " remove for not - not able to unmap \bb and so on - clashes with CtrlP
@@ -79,6 +80,7 @@ Bundle 'Syntastic'
 Bundle 'gitignore'
 " non github repos
 
+syntax enable
 filetype plugin indent on     " required!
 "
 " Brief help
@@ -91,7 +93,7 @@ filetype plugin indent on     " required!
 " NOTE: comments after Bundle command are not allowed..
 
 " theme and background
-set background=dark
+set background=light
 colorscheme solarized
 
 " Copy path to clipboard
@@ -120,15 +122,6 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 let g:clj_highlight_builtins=1      " Highlight Clojure's builtins
 let g:clj_paren_rainbow=1           " Rainbow parentheses'!
 
-" Line numbering magic:
-"   - if Vim loses focus I'm not gonna move -> absolute
-"   - I don't move in insert mode -> absolute
-" possibly replace with jeffkreeftmeijer/vim-numbertoggle
-:au FocusLost * :set number
-:au FocusGained * :set relativenumber
-autocmd InsertEnter * :set number
-autocmd InsertLeave * :set relativenumber
-
 " Handlebars
 au BufRead,BufNewFile *.hbs set filetype=handlebars
 
@@ -143,3 +136,7 @@ nnoremap <leader>m :CtrlPMRUFiles<CR>
 " Setup Airline
 let g:airline_powerline_fonts = 1
 
+"" Setup syntastic
+" Better :sign interface symbols
+let g:syntastic_error_symbol = '✗'
+let g:syntastic_warning_symbol = '!'
