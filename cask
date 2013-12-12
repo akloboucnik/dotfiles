@@ -1,0 +1,21 @@
+# Install native apps with homebrew
+brew tap phinze/homebrew-cask
+brew install brew-cask
+
+# Native apps
+brew cask install dropbox
+brew cask install evernote
+brew cask install firefox
+brew cask install flash
+brew cask install google-chrome
+brew cask install google-drive
+brew cask install haskell-platform
+brew cask install iterm2
+brew cask install kindle
+brew cask install limechat
+brew cask install rdio
+brew cask install sizeup
+brew cask install transmission
+brew cask install virtualbox
+brew cask install vlc
+
