@@ -16,7 +16,7 @@ export GIT_PS1_SHOWUPSTREAM='1'
 export PS1='\h:\W$(__git_ps1 " (\[\033[01;32m\]%s\[\033[00m\])") \u\$ '
 
 # git achievements
-PATH="$PATH:/Users/adam/Prog/git-achievements"
+PATH="$PATH:/Users/adam/Play/git-achievements"
 alias git="git-achievements"
 
 # CL Tool to path
@@ -43,4 +43,5 @@ alias cdw='cd ~/Work'
 alias cdp='cd ~/Prog'
 alias cdgdc='cd ~/Work/gdc/gdc-client'
 
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)
 
