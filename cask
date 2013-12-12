@@ -1,7 +1,3 @@
-# Install native apps with homebrew
-brew tap phinze/homebrew-cask
-brew install brew-cask
-
 # Native apps
 brew cask install dropbox
 brew cask install evernote
