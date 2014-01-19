@@ -35,9 +35,6 @@ alias open_payroll='pdfcrack -m 4 -n 4 -charset="1234567890"'
 # rvm
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
-# homebrew python global binaries to path
-export PATH="/usr/local/share/python:$PATH"
-
 # cd aliases
 alias cdw='cd ~/Work'
 alias cdp='cd ~/Prog'
