@@ -93,7 +93,7 @@ filetype plugin indent on     " required!
 " NOTE: comments after Bundle command are not allowed..
 
 " theme and background
-set background=light
+set background=dark
 colorscheme solarized
 
 " Copy path to clipboard
@@ -140,3 +140,5 @@ let g:airline_powerline_fonts = 1
 " Better :sign interface symbols
 let g:syntastic_error_symbol = '✗'
 let g:syntastic_warning_symbol = '!'
+" use only jshint for javascript checks
+let g:syntastic_javascript_checkers = ['jshint']
