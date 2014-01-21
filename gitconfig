@@ -1,0 +1,29 @@
+[user]
+  name = Adam Kloboucnik
+  email = adam.kloboucnik@gooddata.com
+[github]
+  user = akloboucnik
+  token = b9a74c0fff9d211b05dc99f621447201
+[core]
+  quotepath = false
+  autocrlf = input
+  excludesfile = /Users/adam/.gitignore
+[color]
+  ui = auto
+[achievement]
+  upload = true
+[mergetool "chdiff"]
+  cmd = /usr/bin/env chdiff --wait "$LOCAL" "$REMOTE"
+  trustExitCode = false
+[merge]
+  tool = opendiff
+[alias]
+  ci = commit
+  co = checkout
+  st = status -sb
+  br = branch
+  l = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  pum = pull upstream master
+  lcom = rev-parse --verify --short HEAD
+[push]
+  default = upstream
