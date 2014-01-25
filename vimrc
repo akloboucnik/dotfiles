@@ -141,3 +141,6 @@ let g:syntastic_error_symbol = '✗'
 let g:syntastic_warning_symbol = '!'
 " use only jshint for javascript checks
 let g:syntastic_javascript_checkers = ['jshint']
+
+" do not fold markdown sections
+let g:vim_markdown_folding_disabled = 1
