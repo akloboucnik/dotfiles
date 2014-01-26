@@ -43,6 +43,9 @@ set mouse=a
 
 set t_Co=256
 
+" visualize leading tab and trailing whitespace
+set list lcs=tab\:\'\ ,trail:·
+
 " remove trailing whitespace before save
 autocmd BufWritePre * :%s/\s\+$//e
 
