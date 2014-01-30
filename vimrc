@@ -73,6 +73,7 @@ Bundle 'leafgarland/typescript-vim'
 Bundle 'bling/vim-airline'
 Bundle 'jeffkreeftmeijer/vim-numbertoggle'
 Bundle 'kchmck/vim-coffee-script'
+Bundle 'digitaltoad/vim-jade'
 " vim-scripts repos
 " Bundle 'L9'
 " remove for not - not able to unmap \bb and so on - clashes with CtrlP
