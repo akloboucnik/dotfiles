@@ -80,7 +80,6 @@ Bundle 'digitaltoad/vim-jade'
 " Bundle 'bufkill.vim'
 Bundle 'JavaScript-syntax'
 Bundle 'Syntastic'
-Bundle 'gitignore'
 " non github repos
 
 syntax enable
@@ -131,7 +130,9 @@ au BufRead,BufNewFile *.hbs set filetype=handlebars
 " Markdown syntax
 au BufRead,BufNewFile *.md,*.mdown set filetype=markdown
 
-" Mappings for CtrlP
+" CtrlP
+" ignore all vcs meta data, gdc dist dirs and node_modules of node project
+let g:ctrlp_custom_ignore = '\v[\/](\.git|\.hg|\.svn|node_modules|dist|distribution)$'
 nnoremap <leader>t :CtrlP<CR>
 nnoremap <leader>b :CtrlPBuffer<CR>
 nnoremap <leader>m :CtrlPMRUFiles<CR>
