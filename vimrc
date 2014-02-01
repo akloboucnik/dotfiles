@@ -132,7 +132,7 @@ au BufRead,BufNewFile *.md,*.mdown set filetype=markdown
 
 " CtrlP
 " ignore all vcs meta data, gdc dist dirs and node_modules of node project
-let g:ctrlp_custom_ignore = '\v[\/](\.git|\.hg|\.svn|node_modules|dist|distribution)$'
+let g:ctrlp_custom_ignore = '\v[\/](\.git|\.hg|\.svn|node_modules|dist|distribution|target)$'
 nnoremap <leader>t :CtrlP<CR>
 nnoremap <leader>b :CtrlPBuffer<CR>
 nnoremap <leader>m :CtrlPMRUFiles<CR>
