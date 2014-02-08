@@ -1,0 +1,15 @@
+# vim is editor
+export EDITOR="vim"
+
+# Larger history file
+export HISTSIZE=32768
+export HISTFILESIZE=$HISTSIZE
+export HISTCONTROL="ignoreboth"
+
+# Git branch in prompt
+export GIT_PS1_SHOWDIRTYSTATE='1'
+export GIT_PS1_SHOWUPSTREAM='1'
+
+# Java home
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)
+

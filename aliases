@@ -1,0 +1,11 @@
+alias ll="ls -l"
+alias be='bundle exec'
+alias g='git'
+alias key2clip='cat ~/.ssh/id_rsa.pub | pbcopy'
+alias open_payroll='pdfcrack -m 4 -n 4 -charset="1234567890"'
+
+# cd aliases
+alias cdw='cd ~/Work'
+alias cdp='cd ~/Prog'
+alias cdgdc='cd ~/Work/gdc/gdc-client'
+

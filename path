@@ -1,0 +1,8 @@
+PATH="/usr/local/bin:/usr/local/sbin:~/bin:/usr/local/share/npm/bin:$PATH"
+
+# CL Tool to path
+PATH="$PATH:/Users/adam/Work/gdc/gooddata-cli-1.2.65/bin"
+
+# at the end export
+export PATH
+
