@@ -43,6 +43,7 @@ install tree
 install unrar
 install valgrind
 install vim --override-system-vim
+install visionmedia-watch
 install wkhtmltopdf
 
 # Clean after installing
