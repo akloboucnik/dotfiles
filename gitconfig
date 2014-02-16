@@ -1,6 +1,6 @@
 [user]
   name = Adam Kloboucnik
-  email = adam.kloboucnik@gooddata.com
+  email = a.kloboucnik@gmail.com
 [github]
   user = akloboucnik
   token = b9a74c0fff9d211b05dc99f621447201
@@ -25,5 +25,6 @@
   l = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
   pum = pull upstream master
   lcom = rev-parse --verify --short HEAD
+  cb = name-rev --name-only HEAD
 [push]
   default = upstream
