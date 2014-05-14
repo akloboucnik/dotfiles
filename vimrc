@@ -130,6 +130,9 @@ au BufRead,BufNewFile *.hbs set filetype=handlebars
 " Markdown syntax
 au BufRead,BufNewFile *.md,*.mdown set filetype=markdown
 
+" Make
+autocmd filetype make setlocal noexpandtab
+
 " CtrlP
 " ignore all vcs meta data, gdc dist dirs and node_modules of node project
 let g:ctrlp_custom_ignore = '\v[\/](\.git|\.hg|\.svn|node_modules|dist|distribution|target)$'
