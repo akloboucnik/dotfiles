@@ -49,50 +49,51 @@ set list lcs=tab\:\'\ ,trail:·
 " remove trailing whitespace before save
 autocmd BufWritePre * :%s/\s\+$//e
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " let Vundle manage Vundle
 " required!
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 
-" My Bundles here:
+" My Plugins here:
 " original repos on github
-Bundle 'tpope/vim-fugitive'
-Bundle 'nono/vim-handlebars'
-Bundle 'plasticboy/vim-markdown'
-Bundle 'kien/rainbow_parentheses.vim'
-Bundle 'kien/ctrlp.vim'
-" Bundle 'Lokaltog/vim-easymotion'
-" Bundle 'tpope/vim-rails.git'
-Bundle 'guns/vim-clojure-static'
-Bundle 'tpope/vim-fireplace'
-Bundle 'mileszs/ack.vim'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'leafgarland/typescript-vim'
-Bundle 'bling/vim-airline'
-Bundle 'jeffkreeftmeijer/vim-numbertoggle'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'digitaltoad/vim-jade'
+Plugin 'tpope/vim-fugitive'
+Plugin 'nono/vim-handlebars'
+Plugin 'plasticboy/vim-markdown'
+Plugin 'kien/rainbow_parentheses.vim'
+Plugin 'kien/ctrlp.vim'
+" Plugin 'Lokaltog/vim-easymotion'
+" Plugin 'tpope/vim-rails.git'
+Plugin 'guns/vim-clojure-static'
+Plugin 'tpope/vim-fireplace'
+Plugin 'mileszs/ack.vim'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'bling/vim-airline'
+Plugin 'jeffkreeftmeijer/vim-numbertoggle'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'digitaltoad/vim-jade'
 " vim-scripts repos
-" Bundle 'L9'
+" Plugin 'L9'
 " remove for not - not able to unmap \bb and so on - clashes with CtrlP
-" Bundle 'bufkill.vim'
-Bundle 'JavaScript-syntax'
-Bundle 'Syntastic'
+" Plugin 'bufkill.vim'
+Plugin 'JavaScript-syntax'
+Plugin 'Syntastic'
 " non github repos
 
-syntax enable
+call vundle#end()             " required!
 filetype plugin indent on     " required!
+syntax enable
 "
 " Brief help
-" :BundleList          - list configured bundles
-" :BundleInstall(!)    - install(update) bundles
-" :BundleSearch(!) foo - search(or refresh cache first) for foo
-" :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
+" :PluginList          - list configured bundles
+" :PluginInstall(!)    - install(update) bundles
+" :PluginSearch(!) foo - search(or refresh cache first) for foo
+" :PluginClean(!)      - confirm(or auto-approve) removal of unused bundles
 "
 " see :h vundle for more details or wiki for FAQ
-" NOTE: comments after Bundle command are not allowed..
+" NOTE: comments after Plugin command are not allowed..
 
 " theme and background
 set background=dark
