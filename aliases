@@ -25,5 +25,5 @@ alias mergepdf='/System/Library/Automator/Combine\ PDF\ Pages.action/Contents/Re
 # cd aliases
 alias cdw='cd ~/Work'
 alias cdp='cd ~/Prog'
-alias cdgdc='cd ~/Work/gdc/gdc-client'
+alias cdgdc='cd ~/Work/gdc'
 
