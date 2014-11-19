@@ -1,4 +1,7 @@
-PATH="/usr/local/bin:/usr/local/sbin:~/bin:/usr/local/share/npm/bin:$PATH"
+PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH"
+
+# npm binaries path
+PATH="$PATH:`brew --prefix`/share/npm/bin"
 
 # CL Tool to path
 PATH="$PATH:/Users/adam/Work/gdc/gooddata-cli-1.2.65/bin"
