@@ -14,3 +14,7 @@ export GIT_PS1_SHOWUPSTREAM='1'
 # Java home
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)
 
+# GD Stuff
+export CLIENT_PATH="/Users/adam/Work/gdc/gdc-client"
+export FREEIPA_USER=adam.kloboucnik
+
