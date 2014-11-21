@@ -15,8 +15,10 @@
 [mergetool "chdiff"]
   cmd = /usr/bin/env chdiff --wait "$LOCAL" "$REMOTE"
   trustExitCode = false
+[mergetool "fugitive"]
+  cmd = vim -f -c \"Gdiff\" \"$MERGED\"
 [merge]
-  tool = opendiff
+  tool = fugitive
 [alias]
   ci = commit
   co = checkout
@@ -29,3 +31,5 @@
   l10br = !git for-each-ref --sort=-committerdate --format='%(refname:short)' refs/heads/ | head -n 10
 [push]
   default = upstream
+[pull]
+  rebase = true
