@@ -13,6 +13,31 @@
     "trailing": true,
     "undef": true,
     "unused": true,
-    "globals": { jQuery, $, Ember, Em, before, beforeEach, after, afterEach, describe, it, expect, YUI, GDC }
+    "laxcomma": true,
+    "esnext": false,
+
+    "globals": [
+        "Ember",
+        "Em",
+
+        "require",
+        "define",
+
+        "sinon",
+
+        "before",
+        "beforeEach",
+        "after",
+        "afterEach",
+        "describe",
+        "it",
+        "expect",
+
+        "YUI",
+        "GDC",
+        "GD",
+        "AIT",
+        "App"
+    ]
 }
 
