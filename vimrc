@@ -153,6 +153,30 @@ let g:syntastic_error_symbol = '✗'
 let g:syntastic_warning_symbol = '!'
 " use only jshint for javascript checks
 let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_check_on_open = 1
+
+function s:find_jshintrc(dir)
+    let l:found = globpath(a:dir, '.jshintrc')
+    if filereadable(l:found)
+        return l:found
+    endif
+
+    let l:parent = fnamemodify(a:dir, ':h')
+    if l:parent != a:dir
+        return s:find_jshintrc(l:parent)
+    endif
+
+    return "~/.jshintrc"
+endfunction
+
+function UpdateJsHintConf()
+    let l:dir = expand('%:p:h')
+    let l:jshintrc = s:find_jshintrc(l:dir)
+    let g:syntastic_javascript_jshint_args = l:jshintrc
+endfunction
+
+" TODO call update only if ft=javascript
+au BufEnter * call UpdateJsHintConf()
 
 " do not fold markdown sections
 let g:vim_markdown_folding_disabled = 1
@@ -169,3 +193,5 @@ let g:rbpt_colorpairs = [
   \ [ '4',  '#268bd2'],
   \ ]
 
+" Clear search highlight
+nnoremap <silent> _ :nohl<CR>
