@@ -25,7 +25,9 @@ alias mergepdf='/System/Library/Automator/Combine\ PDF\ Pages.action/Contents/Re
 # cd aliases
 alias cdw='cd ~/Work'
 alias cdp='cd ~/Prog'
-alias cdgdc='cd ~/Work/gdc'
+function cdgdc {
+    cd "$HOME/Work/gdc/$1"
+}
 
 # iTea aliases
 alias itea_start_tomcat='JAVA_OPTS="-Dsun.lang.ClassLoader.allowArraySyntax=true -Dorg.apache.commons.logging.Log=org.apache.commons.logging.impl.Jdk14Logger" /usr/local/Cellar/tomcat6/6.0.41/libexec/bin/startup.sh'
