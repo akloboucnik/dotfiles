@@ -11,6 +11,9 @@ alias ll="ls -l"
 
 alias be='bundle exec'
 alias g='git'
+# for completion on g alias for git
+#complete -o default -o nospace -F __git_complete g _git_main
+
 alias key2clip='cat ~/.ssh/id_rsa.pub | pbcopy'
 alias open_payroll='pdfcrack -m 4 -n 4 -charset="1234567890"'
 alias dl="cd ~/Downloads"
@@ -25,9 +28,16 @@ alias mergepdf='/System/Library/Automator/Combine\ PDF\ Pages.action/Contents/Re
 # cd aliases
 alias cdw='cd ~/Work'
 alias cdp='cd ~/Prog'
-function cdgdc {
+cdgdc() {
     cd "$HOME/Work/gdc/$1"
 }
+
+_cdgdc() {
+    local cur
+    cur=${COMP_WORDS[COMP_CWORD]}
+    COMPREPLY=( $( compgen -S/ -d $HOME/Work/gdc/$cur | cut -b 22- ) )
+}
+complete -o nospace -F _cdgdc cdgdc
 
 # iTea aliases
 alias itea_start_tomcat='JAVA_OPTS="-Dsun.lang.ClassLoader.allowArraySyntax=true -Dorg.apache.commons.logging.Log=org.apache.commons.logging.impl.Jdk14Logger" /usr/local/Cellar/tomcat6/6.0.41/libexec/bin/startup.sh'
