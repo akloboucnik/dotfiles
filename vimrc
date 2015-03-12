@@ -74,11 +74,12 @@ Plugin 'bling/vim-airline'
 Plugin 'jeffkreeftmeijer/vim-numbertoggle'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'digitaltoad/vim-jade'
+Plugin 'mxw/vim-jsx'
+Plugin 'pangloss/vim-javascript'
 " vim-scripts repos
 " Plugin 'L9'
 " remove for not - not able to unmap \bb and so on - clashes with CtrlP
 " Plugin 'bufkill.vim'
-Plugin 'JavaScript-syntax'
 Plugin 'Syntastic'
 " non github repos
 
@@ -152,7 +153,7 @@ let g:airline_powerline_fonts = 1
 let g:syntastic_error_symbol = '✗'
 let g:syntastic_warning_symbol = '!'
 " use only jshint for javascript checks
-let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_javascript_checkers = ['jsxhint']
 let g:syntastic_check_on_open = 1
 
 function s:find_jshintrc(dir)
@@ -195,3 +196,6 @@ let g:rbpt_colorpairs = [
 
 " Clear search highlight
 nnoremap <silent> _ :nohl<CR>
+
+" JSX in JS
+"let g:jsx_ext_required = 0
