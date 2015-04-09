@@ -76,6 +76,7 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'digitaltoad/vim-jade'
 Plugin 'mxw/vim-jsx'
 Plugin 'pangloss/vim-javascript'
+Plugin 'tomtom/tcomment_vim'
 " vim-scripts repos
 " Plugin 'L9'
 " remove for not - not able to unmap \bb and so on - clashes with CtrlP
