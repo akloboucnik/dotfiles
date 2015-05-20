@@ -157,28 +157,32 @@ let g:syntastic_warning_symbol = '!'
 let g:syntastic_javascript_checkers = ['jsxhint']
 let g:syntastic_check_on_open = 1
 
-function s:find_jshintrc(dir)
-    let l:found = globpath(a:dir, '.jshintrc')
-    if filereadable(l:found)
-        return l:found
-    endif
+if !exists("*s:find_jshintrc")
+    function s:find_jshintrc(dir)
+        let l:found = globpath(a:dir, '.jshintrc')
+        if filereadable(l:found)
+            return l:found
+        endif
 
-    let l:parent = fnamemodify(a:dir, ':h')
-    if l:parent != a:dir
-        return s:find_jshintrc(l:parent)
-    endif
+        let l:parent = fnamemodify(a:dir, ':h')
+        if l:parent != a:dir
+            return s:find_jshintrc(l:parent)
+        endif
 
-    return "~/.jshintrc"
-endfunction
+        return "~/.jshintrc"
+    endfunction
+endif
 
-function UpdateJsHintConf()
-    let l:dir = expand('%:p:h')
-    let l:jshintrc = s:find_jshintrc(l:dir)
-    let g:syntastic_javascript_jshint_args = l:jshintrc
-endfunction
+if !exists("*UpdateJsHintConf")
+    function UpdateJsHintConf()
+        let l:dir = expand('%:p:h')
+        let l:jshintrc = s:find_jshintrc(l:dir)
+        let g:syntastic_javascript_jshint_args = l:jshintrc
+    endfunction
+endif
 
-" TODO call update only if ft=javascript
-au BufEnter * call UpdateJsHintConf()
+" call update only if ft=javascript
+autocmd FileType javascript :autocmd BufEnter * call UpdateJsHintConf()
 
 " do not fold markdown sections
 let g:vim_markdown_folding_disabled = 1
