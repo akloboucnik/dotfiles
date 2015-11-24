@@ -33,7 +33,7 @@ set cul
 set ruler
 set laststatus=2
 
-set statusline=%(%m\ %)%f%(\ %y%)%(\ [%{&fileencoding}]%)\ %{fugitive#statusline()}%=[%3b,%4(0x%B%)]\ %3c\ %4l\ /%5L\ %4P
+set statusline=%(%m\ %)pathshorten(%f)%(\ %y%)%(\ [%{&fileencoding}]%)\ %{fugitive#statusline()}%=[%3b,%4(0x%B%)]\ %3c\ %4l\ /%5L\ %4P
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -78,6 +78,7 @@ Plugin 'mxw/vim-jsx'
 Plugin 'pangloss/vim-javascript'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'jiangmiao/auto-pairs'
+Plugin 'majutsushi/tagbar'
 " vim-scripts repos
 " Plugin 'L9'
 " remove for not - not able to unmap \bb and so on - clashes with CtrlP
@@ -149,13 +150,14 @@ nnoremap <leader>m :CtrlPMRUFiles<CR>
 
 " Setup Airline
 let g:airline_powerline_fonts = 1
+let g:airline_section_c = '%<%{pathshorten(substitute(expand("%:p"), getcwd()."/", "", "g"))}%m%#__accent_red#%{airline#util#wrap(airline#parts#readonly(),0)}%#__restore__#'
 
 "" Setup syntastic
 " Better :sign interface symbols
 let g:syntastic_error_symbol = '✗'
 let g:syntastic_warning_symbol = '!'
 " use only jshint for javascript checks
-let g:syntastic_javascript_checkers = ['jsxhint']
+let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_check_on_open = 1
 
 if !exists("*s:find_jshintrc")
@@ -205,3 +207,17 @@ nnoremap <silent> _ :nohl<CR>
 
 " JSX in JS
 "let g:jsx_ext_required = 0
+"
+
+let g:ctrlp_buffer_func = { 'enter': 'CtrlPMappings' }
+
+function! CtrlPMappings()
+  nnoremap <buffer> <silent> <C-@> :call <sid>DeleteBuffer()<cr>
+endfunction
+
+function! s:DeleteBuffer()
+  let path = fnamemodify(getline('.')[2:], ':p')
+  let bufn = matchstr(path, '\v\d+\ze\*No Name')
+  exec "bd" bufn ==# "" ? path : bufn
+  exec "norm \<F5>"
+endfunction
