@@ -3,6 +3,11 @@ PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH"
 # npm binaries path
 PATH="$PATH:`brew --prefix`/share/npm/bin"
 
+# go
+export GOROOT="`brew --prefix go`/libexec"
+export GOPATH=$HOME/.go
+PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+
 # at the end export
 export PATH
 
