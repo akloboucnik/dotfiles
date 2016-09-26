@@ -59,26 +59,23 @@ Plugin 'gmarik/Vundle.vim'
 " My Plugins here:
 " original repos on github
 Plugin 'tpope/vim-fugitive'
-Plugin 'nono/vim-handlebars'
 Plugin 'plasticboy/vim-markdown'
-Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'kien/ctrlp.vim'
-" Plugin 'Lokaltog/vim-easymotion'
-" Plugin 'tpope/vim-rails.git'
-Plugin 'guns/vim-clojure-static'
-Plugin 'tpope/vim-fireplace'
-Plugin 'mileszs/ack.vim'
+Plugin 'j5shi/ctrlp_bdelete.vim'
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'leafgarland/typescript-vim'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'bling/vim-airline'
 Plugin 'jeffkreeftmeijer/vim-numbertoggle'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'digitaltoad/vim-jade'
 Plugin 'mxw/vim-jsx'
 Plugin 'pangloss/vim-javascript'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'jiangmiao/auto-pairs'
-Plugin 'majutsushi/tagbar'
+Plugin 'fatih/vim-go'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+Plugin 'StanAngeloff/php.vim'
+Plugin 'editorconfig/editorconfig-vim'
+Plugin 'metakirby5/codi.vim'
 " vim-scripts repos
 " Plugin 'L9'
 " remove for not - not able to unmap \bb and so on - clashes with CtrlP
@@ -124,13 +121,6 @@ au Syntax clojure RainbowParenthesesLoadRound
 
 " Ack
 let g:ackprg = 'ag --nogroup --nocolor --column'
-
-" FIXME: doesn't work now
-let g:clj_highlight_builtins=1      " Highlight Clojure's builtins
-let g:clj_paren_rainbow=1           " Rainbow parentheses'!
-
-" Handlebars
-au BufRead,BufNewFile *.hbs set filetype=handlebars
 
 " Markdown syntax
 au BufRead,BufNewFile *.md,*.mdown set filetype=markdown
