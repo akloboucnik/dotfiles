@@ -133,10 +133,12 @@ autocmd Filetype gitcommit setlocal spell textwidth=72
 
 " CtrlP
 " ignore all vcs meta data, gdc dist dirs and node_modules of node project
-let g:ctrlp_custom_ignore = '\v[\/](\.git|\.hg|\.svn|node_modules|dist|distribution|target)$'
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . --cached --exclude-standard --others']
 nnoremap <leader>t :CtrlP<CR>
 nnoremap <leader>b :CtrlPBuffer<CR>
 nnoremap <leader>m :CtrlPMRUFiles<CR>
+
+call ctrlp_bdelete#init()
 
 " Setup Airline
 let g:airline_powerline_fonts = 1
