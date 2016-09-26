@@ -142,6 +142,20 @@ call ctrlp_bdelete#init()
 
 " Setup Airline
 let g:airline_powerline_fonts = 1
+let g:airline_mode_map = {
+    \ '__' : '-',
+    \ 'n'  : 'N',
+    \ 'i'  : 'I',
+    \ 'R'  : 'R',
+    \ 'c'  : 'C',
+    \ 'v'  : 'V',
+    \ 'V'  : 'V',
+    \ '' : 'V',
+    \ 's'  : 'S',
+    \ 'S'  : 'S',
+    \ '' : 'S',
+    \ }
+let g:airline_theme='solarized'
 let g:airline_section_c = '%<%{pathshorten(substitute(expand("%:p"), getcwd()."/", "", "g"))}%m%#__accent_red#%{airline#util#wrap(airline#parts#readonly(),0)}%#__restore__#'
 
 "" Setup syntastic
@@ -151,6 +165,11 @@ let g:syntastic_warning_symbol = '!'
 " use only jshint for javascript checks
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_check_on_open = 1
+
+" UtilSnips setup
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 if !exists("*s:find_jshintrc")
     function s:find_jshintrc(dir)
@@ -200,6 +219,9 @@ nnoremap <silent> _ :nohl<CR>
 " JSX in JS
 "let g:jsx_ext_required = 0
 "
+
+let g:EditorConfig_exec_path = '/usr/local/bin/editorconfig'
+let g:EditorConfig_core_mode = 'external_command'
 
 let g:ctrlp_buffer_func = { 'enter': 'CtrlPMappings' }
 
