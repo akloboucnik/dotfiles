@@ -10,9 +10,10 @@ brew cask install google-drive
 brew cask install haskell-platform
 brew cask install iterm2
 brew cask install intellij-idea-ce
-brew cask install kindle
 brew cask install limechat
+brew cask install lunchy
 brew cask install mongohub
+brew cask install sequel-pro
 brew cask install sizeup
 brew cask install spotify
 brew cask install transmission
