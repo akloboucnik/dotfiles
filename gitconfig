@@ -1,12 +1,13 @@
 [user]
   name = Adam Kloboucnik
   email = a.kloboucnik@gmail.com
+	useconfigonly = true
 [github]
   user = akloboucnik
   token = b9a74c0fff9d211b05dc99f621447201
 [core]
   quotepath = false
-  autocrlf = input
+	autocrlf = input
   excludesfile = /Users/adam/.gitignore
 [color]
   ui = auto
@@ -24,11 +25,12 @@
   co = checkout
   st = status -sb
   br = branch
-  l = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  l = log --use-mailmap --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
   pum = pull upstream master
   lcom = rev-parse --verify --short HEAD
   cb = name-rev --name-only HEAD
   l10br = !git for-each-ref --sort=-committerdate --format='%(refname:short)' refs/heads/ | head -n 10
+  who = shortlog -sne
 [push]
   default = upstream
 [pull]
