@@ -17,6 +17,7 @@ alias g='git'
 alias key2clip='cat ~/.ssh/id_rsa.pub | pbcopy'
 alias open_payroll='pdfcrack -m 4 -n 4 -charset="1234567890"'
 alias dl="cd ~/Downloads"
+alias dnsflush='sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder'
 
 # URL-encode strings
 alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1]);"'
@@ -24,6 +25,13 @@ alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.ar
 # Merge PDF files
 # Usage: `mergepdf -o output.pdf input{1,2,3}.pdf`
 alias mergepdf='/System/Library/Automator/Combine\ PDF\ Pages.action/Contents/Resources/join.py'
+
+# spotify
+alias spl='spotify play'
+alias spa='spotify pause'
+alias sps='spotify status'
+
+alias alert='terminal-notifier -title "$([ $? = 0  ] && echo Terminal || echo Error)" -message "$(history|tail -n1|sed -E "s/^\s*[0-9 ]+\s*//; s/[\;\&\|\s]*(alert)$//")"'
 
 # cd aliases
 alias cdw='cd ~/Work'
@@ -42,4 +50,6 @@ complete -o nospace -F _cdgdc cdgdc
 # iTea aliases
 alias itea_start_tomcat='JAVA_OPTS="-Dsun.lang.ClassLoader.allowArraySyntax=true -Dorg.apache.commons.logging.Log=org.apache.commons.logging.impl.Jdk14Logger" /usr/local/Cellar/tomcat6/6.0.41/libexec/bin/startup.sh'
 alias itea_stop_tomcat='JAVA_OPTS="-Dsun.lang.ClassLoader.allowArraySyntax=true -Dorg.apache.commons.logging.Log=org.apache.commons.logging.impl.Jdk14Logger" /usr/local/Cellar/tomcat6/6.0.41/libexec/bin/shutdown.sh'
+
+alias virtualenv3='virtualenv -p python3'
 
