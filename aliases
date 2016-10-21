@@ -1,3 +1,4 @@
+# vim: filetype=sh
 if ls --color > /dev/null 2>&1; then # GNU
     flag="--color"
 else # BSD
@@ -18,6 +19,7 @@ alias key2clip='cat ~/.ssh/id_rsa.pub | pbcopy'
 alias open_payroll='pdfcrack -m 4 -n 4 -charset="1234567890"'
 alias dl="cd ~/Downloads"
 alias dnsflush='sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder'
+alias tcplist='lsof -iTCP -sTCP:LISTEN -n -P'
 
 # URL-encode strings
 alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1]);"'
