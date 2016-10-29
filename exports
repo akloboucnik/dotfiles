@@ -1,3 +1,4 @@
+# vim: filetype=sh
 # vim is editor
 export EDITOR="vim"
 
@@ -13,10 +14,6 @@ export GIT_PS1_SHOWUPSTREAM='1'
 
 # Java home
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
-
-# GD Stuff
-export CLIENT_PATH="/Users/adam/Work/gdc/gdc-client"
-export FREEIPA_USER=adam.kloboucnik
 
 # pip should only run if there is a virtualenv currently activated
 export PIP_REQUIRE_VIRTUALENV=true
