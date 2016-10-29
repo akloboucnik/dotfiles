@@ -1,3 +1,4 @@
+# vim: filetype=sh
 PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH"
 
 # npm binaries path
