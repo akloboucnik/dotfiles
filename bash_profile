@@ -8,5 +8,8 @@ unset file
 source "/usr/local/etc/bash_completion.d/git-completion.bash"
 source "/usr/local/etc/bash_completion.d/git-prompt.sh"
 
+# use z
+source "`brew --prefix`/etc/profile.d/z.sh"
+
 # setup git branch in prompt
 export PS1='\h:\W$(__git_ps1 " (\[\033[01;32m\]%s\[\033[00m\])") \u\$ '
