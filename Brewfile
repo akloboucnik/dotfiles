@@ -1,50 +1,53 @@
 # Brewfile as described on https://github.com/mxcl/homebrew/pull/24107
-# Update all packages
-update
-
-# Upgrade any already-installed formulae
-upgrade
 
 # Install brew-cask subsystem
-tap phinze/homebrew-cask
-install brew-cask
+tap 'caskroom/cask'
+
+# Install homebrew-bundle subsystem
+tap 'Homebrew/bundle'
 
 # Install needed formulae
-install apple-gcc42
-install brew-cask
-install chromedriver
-install cloc
-install cscope
-install curl
-install dos2unix
-install gd
-install ghc
-install git
-install haskell-platform
-install heroku-toolbelt
-install hub
-install imagemagick
-install jq
-install leiningen
-install mysql
-install node
-install openssl
-install pdfcrack
-install phantomjs
-install postgresql
-install python
-install reattach-to-user-namespace
-install redis
-install selenium-server-standalone
-install sqlite
-install the_silver_searcher
-install tmux
-install tree
-install unrar
-install valgrind
-install vim --override-system-vim
-install visionmedia-watch
-install wkhtmltopdf
+brew 'ant'
+brew 'cloc'
+brew 'curl'
+brew 'dos2unix'
+brew 'editorconfig'
+brew 'fswatch'
+brew 'fzf'
+brew 'git'
+brew 'heroku'
+brew 'hub'
+brew 'imagemagick'
+brew 'jq'
+brew 'macvim', args: ['with-override-system-vim' , 'with-python3']
+brew 'mas'
+brew 'mysql'
+brew 'node6-lts'
+brew 'pdfcrack'
+brew 'postgresql'
+brew 'python'
+brew 'python3'
+brew 'reattach-to-user-namespace'
+brew 'redis'
+brew 'sqlite'
+brew 'terminal-notifier'
+brew 'tmux'
+brew 'tree'
+brew 'unrar'
+brew 'visionmedia-watch'
+brew 'wget'
+brew 'z'
 
-# Clean after installing
-cleanup
+# casks
+cask 'dash'
+cask 'docker'
+cask 'google-chrome'
+cask 'iterm2'
+cask 'java'
+cask 'sizeup'
+cask 'slack'
+cask 'spotify'
+
+# Mac app store
+mas '1Password', id: 443987910
+mas 'Be Focused Pro', id: 961632517
