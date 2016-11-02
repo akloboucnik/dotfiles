@@ -235,3 +235,10 @@ function! s:DeleteBuffer()
   exec "bd" bufn ==# "" ? path : bufn
   exec "norm \<F5>"
 endfunction
+
+augroup python_files
+    autocmd FileType python setlocal noexpandtab
+    autocmd FileType python set tabstop=4
+    autocmd FileType python set shiftwidth=4
+    autocmd FileType python set list lcs=tab\:\>\ ,trail:·
+augroup END
