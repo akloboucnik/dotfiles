@@ -44,7 +44,7 @@ set mouse=a
 set t_Co=256
 
 " visualize leading tab and trailing whitespace
-set list lcs=tab\:\'\ ,trail:·
+set list lcs=tab\:\·\ ,trail:·
 
 " remove trailing whitespace before save
 autocmd BufWritePre * :%s/\s\+$//e
@@ -68,6 +68,7 @@ Plugin 'bling/vim-airline'
 Plugin 'jeffkreeftmeijer/vim-numbertoggle'
 Plugin 'mxw/vim-jsx'
 Plugin 'pangloss/vim-javascript'
+Plugin 'kchmck/vim-coffee-script'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'fatih/vim-go'
@@ -162,9 +163,11 @@ let g:airline_section_c = '%<%{pathshorten(substitute(expand("%:p"), getcwd()."/
 " Better :sign interface symbols
 let g:syntastic_error_symbol = '✗'
 let g:syntastic_warning_symbol = '!'
-" use only jshint for javascript checks
+" use only eslint for javascript checks
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_check_on_open = 1
+" use mypy and pyflakes for python
+let g:syntastic_python_checkers = ['mypy', 'pyflakes']
 
 " UtilSnips setup
 let g:UltiSnipsExpandTrigger="<tab>"
@@ -225,6 +228,8 @@ let g:EditorConfig_core_mode = 'external_command'
 
 let g:ctrlp_buffer_func = { 'enter': 'CtrlPMappings' }
 
+hi SpecialKey ctermbg=8 ctermfg=10
+
 function! CtrlPMappings()
   nnoremap <buffer> <silent> <C-@> :call <sid>DeleteBuffer()<cr>
 endfunction
@@ -240,5 +245,12 @@ augroup python_files
     autocmd FileType python setlocal noexpandtab
     autocmd FileType python set tabstop=4
     autocmd FileType python set shiftwidth=4
-    autocmd FileType python set list lcs=tab\:\>\ ,trail:·
+    autocmd FileType python set list lcs=tab\:\·\ ,trail:·
+augroup END
+
+augroup coffee_script
+    autocmd FileType coffee setlocal noexpandtab
+    autocmd FileType coffee set tabstop=4
+    autocmd FileType coffee set shiftwidth=4
+    autocmd FileType coffee set list lcs=tab\:\·\ ,trail:·
 augroup END
