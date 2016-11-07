@@ -6,6 +6,9 @@ tap 'caskroom/cask'
 # Install homebrew-bundle subsystem
 tap 'Homebrew/bundle'
 
+# Tap fonts for powerline font
+tap 'caskroom/fonts'
+
 # Install needed formulae
 brew 'ant'
 brew 'cloc'
@@ -41,6 +44,7 @@ brew 'z'
 # casks
 cask 'dash'
 cask 'docker'
+cask 'font-inconsolata-dz-for-powerline'
 cask 'google-chrome'
 cask 'iterm2'
 cask 'java'
