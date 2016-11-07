@@ -1,4 +1,10 @@
 # vim: filetype=sh
+
+# locale - setup first - do not move to `export`
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
+# load children
 for file in ~/.{path,exports,aliases}; do
     [ -r "$file" ] && [ -f "$file" ] && source "$file"
 done

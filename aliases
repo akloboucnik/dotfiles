@@ -43,6 +43,9 @@ alias cdp='cd ~/Prog'
 alias itea_start_tomcat='JAVA_OPTS="-Dsun.lang.ClassLoader.allowArraySyntax=true -Dorg.apache.commons.logging.Log=org.apache.commons.logging.impl.Jdk14Logger" /usr/local/Cellar/tomcat6/6.0.41/libexec/bin/startup.sh'
 alias itea_stop_tomcat='JAVA_OPTS="-Dsun.lang.ClassLoader.allowArraySyntax=true -Dorg.apache.commons.logging.Log=org.apache.commons.logging.impl.Jdk14Logger" /usr/local/Cellar/tomcat6/6.0.41/libexec/bin/shutdown.sh'
 
-alias virtualenv3='virtualenv -p python3'
+# python
+alias act='source env/bin/activate'
+alias virtualenv3='virtualenv -p $(which python3)'
 alias virtualenv2='virtualenv -p python2.7'
+alias ptww='ptw --ignore env -- -v -s'
 
