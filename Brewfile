@@ -44,7 +44,7 @@ brew 'z'
 # casks
 cask 'dash'
 cask 'docker'
-cask 'font-inconsolata-dz-for-powerline'
+cask 'font-fira-mono-for-powerline' # looks good in iTerm with 12pt, horizontal spacing 100% and vertical ~85%
 cask 'google-chrome'
 cask 'iterm2'
 cask 'java'
