@@ -35,7 +35,6 @@ set laststatus=2
 
 set statusline=%(%m\ %)pathshorten(%f)%(\ %y%)%(\ [%{&fileencoding}]%)\ %{fugitive#statusline()}%=[%3b,%4(0x%B%)]\ %3c\ %4l\ /%5L\ %4P
 set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 set showcmd
@@ -71,17 +70,13 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'jiangmiao/auto-pairs'
-Plugin 'fatih/vim-go'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'StanAngeloff/php.vim'
 Plugin 'editorconfig/editorconfig-vim'
-Plugin 'metakirby5/codi.vim'
+Plugin 'w0rp/ale'
 " vim-scripts repos
 " Plugin 'L9'
-" remove for not - not able to unmap \bb and so on - clashes with CtrlP
-" Plugin 'bufkill.vim'
-Plugin 'Syntastic'
 " non github repos
 
 call vundle#end()             " required!
@@ -159,15 +154,12 @@ let g:airline_mode_map = {
 let g:airline_theme='solarized'
 let g:airline_section_c = '%<%{pathshorten(substitute(expand("%:p"), getcwd()."/", "", "g"))}%m%#__accent_red#%{airline#util#wrap(airline#parts#readonly(),0)}%#__restore__#'
 
-"" Setup syntastic
-" Better :sign interface symbols
-let g:syntastic_error_symbol = '✗'
-let g:syntastic_warning_symbol = '!'
-" use only eslint for javascript checks
-let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_check_on_open = 1
-" use mypy and pyflakes for python
-let g:syntastic_python_checkers = ['mypy', 'pyflakes']
+"" Setup ale
+let g:ale_sign_error = '✗'
+let g:ale_sign_warning = '!'
+let g:ale_echo_msg_error_str = '✗'
+let g:ale_echo_msg_warning_str = '!'
+let g:ale_echo_msg_format = '[%linter%] %s'
 
 " UtilSnips setup
 let g:UltiSnipsExpandTrigger="<tab>"
