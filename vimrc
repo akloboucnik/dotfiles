@@ -69,13 +69,13 @@ Plugin 'mxw/vim-jsx'
 Plugin 'pangloss/vim-javascript'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'tomtom/tcomment_vim'
-Plugin 'jiangmiao/auto-pairs'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'StanAngeloff/php.vim'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'w0rp/ale'
 " vim-scripts repos
+Plugin 'auto-pairs-gentle'
 " Plugin 'L9'
 " non github repos
 
