@@ -47,7 +47,7 @@ alias itea_stop_tomcat='JAVA_OPTS="-Dsun.lang.ClassLoader.allowArraySyntax=true 
 alias act='source env/bin/activate'
 alias virtualenv3='virtualenv -p $(which python3)'
 alias virtualenv2='virtualenv -p python2.7'
-alias ptww='ptw --ignore env -- -v -s'
+alias ptww='ptw --ignore env -- -v '
 
 # quantlane
 alias pipq-install='pip install --trusted-host=etsmt001 --extra-index-url=http://etsmt001:2020/pypi'
