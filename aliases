@@ -54,6 +54,6 @@ pyclean () {
 }
 
 # quantlane
-alias pipq-install='pip install --trusted-host=etsmt001 --extra-index-url=http://etsmt001:2020/pypi'
-alias pipaq-install='pip-accel install --trusted-host=etsmt001 --extra-index-url=http://etsmt001:2020/pypi'
+alias pipq-install='pip install --extra-index-url=https://pypi.int.quantlane.com/pypi'
+alias pipaq-install='pip-accel install --extra-index-url=https://pypi.int.quantlane.com/pypi'
 
