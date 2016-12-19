@@ -48,7 +48,12 @@ alias act='source env/bin/activate'
 alias virtualenv3='virtualenv -p $(which python3)'
 alias virtualenv2='virtualenv -p python2.7'
 alias ptww='ptw --ignore env -- -v '
+pyclean () {
+        find . -type f -name "*.py[co]" -delete
+        find . -type d -name "__pycache__" -delete
+}
 
 # quantlane
 alias pipq-install='pip install --trusted-host=etsmt001 --extra-index-url=http://etsmt001:2020/pypi'
 alias pipaq-install='pip-accel install --trusted-host=etsmt001 --extra-index-url=http://etsmt001:2020/pypi'
+
