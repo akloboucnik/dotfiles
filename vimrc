@@ -74,6 +74,7 @@ Plugin 'honza/vim-snippets'
 Plugin 'StanAngeloff/php.vim'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'w0rp/ale'
+Plugin 'hdima/python-syntax'
 " vim-scripts repos
 Plugin 'auto-pairs-gentle'
 " Plugin 'L9'
@@ -246,3 +247,5 @@ augroup coffee_script
     autocmd FileType coffee set shiftwidth=4
     autocmd FileType coffee set list lcs=tab\:\·\ ,trail:·
 augroup END
+
+au BufRead,BufNewFile Dockerfile* setfiletype dockerfile
