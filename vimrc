@@ -234,6 +234,8 @@ function! s:DeleteBuffer()
   exec "norm \<F5>"
 endfunction
 
+let python_hightlight_all = 1
+
 augroup python_files
     autocmd FileType python setlocal noexpandtab
     autocmd FileType python set tabstop=4
@@ -246,6 +248,11 @@ augroup coffee_script
     autocmd FileType coffee set tabstop=4
     autocmd FileType coffee set shiftwidth=4
     autocmd FileType coffee set list lcs=tab\:\·\ ,trail:·
+augroup END
+
+augroup yaml_files
+    autocmd FileType yaml set tabstop=2
+    autocmd FileType yaml set shiftwidth=2
 augroup END
 
 au BufRead,BufNewFile Dockerfile* setfiletype dockerfile
