@@ -75,6 +75,8 @@ Plugin 'StanAngeloff/php.vim'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'w0rp/ale'
 Plugin 'hdima/python-syntax'
+Plugin 'davidhalter/jedi-vim'
+Plugin 'albfan/ag.vim'
 " vim-scripts repos
 Plugin 'auto-pairs-gentle'
 " Plugin 'L9'
@@ -131,6 +133,10 @@ autocmd Filetype gitcommit setlocal spell textwidth=72
 " CtrlP
 " ignore all vcs meta data, gdc dist dirs and node_modules of node project
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . --cached --exclude-standard --others']
+let g:ctrlp_prompt_mappings = {
+    \ 'AcceptSelection("e")': ['<c-t>'],
+    \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
+\ }
 nnoremap <leader>t :CtrlP<CR>
 nnoremap <leader>b :CtrlPBuffer<CR>
 nnoremap <leader>m :CtrlPMRUFiles<CR>
@@ -154,6 +160,8 @@ let g:airline_mode_map = {
     \ }
 let g:airline_theme='solarized'
 let g:airline_section_c = '%<%{pathshorten(substitute(expand("%:p"), getcwd()."/", "", "g"))}%m%#__accent_red#%{airline#util#wrap(airline#parts#readonly(),0)}%#__restore__#'
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#show_buffers = 0
 
 "" Setup ale
 let g:ale_sign_error = '✗'
@@ -256,3 +264,9 @@ augroup yaml_files
 augroup END
 
 au BufRead,BufNewFile Dockerfile* setfiletype dockerfile
+
+" tab switching
+nnoremap H gT
+nnoremap L gt
+
+nnoremap <leader>w :bufdo bd <CR>
