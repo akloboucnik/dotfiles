@@ -269,4 +269,5 @@ au BufRead,BufNewFile Dockerfile* setfiletype dockerfile
 nnoremap H gT
 nnoremap L gt
 
-nnoremap <leader>w :bufdo bd <CR>
+nnoremap <leader>w :bd <CR>
+nnoremap <leader>W :bufdo bd <CR>
