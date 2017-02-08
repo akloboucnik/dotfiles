@@ -47,7 +47,7 @@ alias itea_stop_tomcat='JAVA_OPTS="-Dsun.lang.ClassLoader.allowArraySyntax=true 
 alias act='source env/bin/activate'
 alias virtualenv3='virtualenv -p $(which python3)'
 alias virtualenv2='virtualenv -p python2.7'
-alias ptww='pytest-watch --onpass "terminal-notifier -message \"All tests passed\" -appIcon ~/dotfiles/notify-icons/Success.icns" --onfail "terminal-notifier -message \"Tests failed\" -appIcon ~/dotfiles/notify-icons/ailed.icns" -- -v '
+alias ptww='pytest-watch --onpass "terminal-notifier -message \"All tests passed\" -appIcon ~/dotfiles/notify-icons/Success.icns" --onfail "terminal-notifier -message \"Tests failed\" -appIcon ~/dotfiles/notify-icons/Failed.icns" -- -vv '
 pyclean () {
         find . -type f -name "*.py[co]" -delete
         find . -type d -name "__pycache__" -delete
