@@ -144,7 +144,9 @@ nnoremap <leader>m :CtrlPMRUFiles<CR>
 call ctrlp_bdelete#init()
 
 " Setup Airline
-let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts = 0
+let g:airline_left_sep = ''
+let g:airline_right_sep = ''
 let g:airline_mode_map = {
     \ '__' : '-',
     \ 'n'  : 'N',
