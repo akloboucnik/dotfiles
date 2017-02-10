@@ -61,7 +61,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'kien/ctrlp.vim'
 Plugin 'j5shi/ctrlp_bdelete.vim'
-Plugin 'altercation/vim-colors-solarized'
+Plugin 'chriskempson/base16-vim'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'bling/vim-airline'
 Plugin 'jeffkreeftmeijer/vim-numbertoggle'
@@ -97,7 +97,7 @@ syntax enable
 
 " theme and background
 set background=dark
-colorscheme solarized
+colorscheme base16-tomorrow-night
 
 " Copy path to clipboard
 " Convert slashes to backslashes for Windows.
@@ -231,7 +231,8 @@ let g:EditorConfig_core_mode = 'external_command'
 
 let g:ctrlp_buffer_func = { 'enter': 'CtrlPMappings' }
 
-hi SpecialKey ctermbg=8 ctermfg=10
+" Change color of tab segment for solarized
+" hi SpecialKey ctermbg=8 ctermfg=10
 
 function! CtrlPMappings()
   nnoremap <buffer> <silent> <C-@> :call <sid>DeleteBuffer()<cr>
