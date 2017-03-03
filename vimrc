@@ -75,7 +75,7 @@ Plugin 'StanAngeloff/php.vim'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'w0rp/ale'
 Plugin 'hdima/python-syntax'
-Plugin 'davidhalter/jedi-vim'
+" Plugin 'davidhalter/jedi-vim'
 Plugin 'albfan/ag.vim'
 " vim-scripts repos
 Plugin 'auto-pairs-gentle'
@@ -162,6 +162,7 @@ let g:airline_mode_map = {
     \ }
 let g:airline_theme='solarized'
 let g:airline_section_c = '%<%{pathshorten(substitute(expand("%:p"), getcwd()."/", "", "g"))}%m%#__accent_red#%{airline#util#wrap(airline#parts#readonly(),0)}%#__restore__#'
+let g:airline_section_y = '%{airline#util#wrap(airline#parts#ffenc(),0)}%{&expandtab?"[spc]":"[tab]"}'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_buffers = 0
 
