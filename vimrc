@@ -173,37 +173,12 @@ let g:ale_echo_msg_error_str = '✗'
 let g:ale_echo_msg_warning_str = '!'
 let g:ale_echo_msg_format = '[%linter%] %s'
 
+let g:ale_linters = { 'javascript': [ 'standard', 'flow' ] }
+
 " UtilSnips setup
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-
-if !exists("*s:find_jshintrc")
-    function s:find_jshintrc(dir)
-        let l:found = globpath(a:dir, '.jshintrc')
-        if filereadable(l:found)
-            return l:found
-        endif
-
-        let l:parent = fnamemodify(a:dir, ':h')
-        if l:parent != a:dir
-            return s:find_jshintrc(l:parent)
-        endif
-
-        return "~/.jshintrc"
-    endfunction
-endif
-
-if !exists("*UpdateJsHintConf")
-    function UpdateJsHintConf()
-        let l:dir = expand('%:p:h')
-        let l:jshintrc = s:find_jshintrc(l:dir)
-        let g:syntastic_javascript_jshint_args = l:jshintrc
-    endfunction
-endif
-
-" call update only if ft=javascript
-autocmd FileType javascript :autocmd BufEnter * call UpdateJsHintConf()
 
 " do not fold markdown sections
 let g:vim_markdown_folding_disabled = 1
@@ -224,8 +199,10 @@ let g:rbpt_colorpairs = [
 nnoremap <silent> _ :nohl<CR>
 
 " JSX in JS
-"let g:jsx_ext_required = 0
-"
+let g:jsx_ext_required = 0
+
+" Javascript
+let g:javascript_plugin_flow = 1
 
 let g:EditorConfig_exec_path = '/usr/local/bin/editorconfig'
 let g:EditorConfig_core_mode = 'external_command'
