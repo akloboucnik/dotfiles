@@ -9,6 +9,9 @@ export GOROOT="`brew --prefix go`/libexec"
 export GOPATH=$HOME/.go
 PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
+# rust
+PATH="$HOME/.cargo/bin:$PATH"
+
 # at the end export
 export PATH
 
