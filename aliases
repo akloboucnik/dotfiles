@@ -56,3 +56,8 @@ pyclean () {
 # quantlane
 alias pipq-install='pip install --extra-index-url=https://pypi.int.quantlane.com/pypi'
 alias pipaq-install='pip-accel install --extra-index-url=https://pypi.int.quantlane.com/pypi'
+
+vg () {
+    # Run commands inside Vagrant.
+    vagrant ssh -t -c "$*"
+}
